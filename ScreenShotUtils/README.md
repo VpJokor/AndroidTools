@@ -4,7 +4,8 @@
 需要权限：Manifest.permission.READ_EXTERNAL_STORAG   
 使用方法：  
 在onCreate中注册   
-```if (PermissionUtils.isGranted(Manifest.permission.READ_EXTERNAL_STORAGE)) {  
+```
+    if (PermissionUtils.isGranted(Manifest.permission.READ_EXTERNAL_STORAGE)) {  
             ScreenShotUtils.getInstance().register(this) {  
                   
                 val bottomShareToView = BottomShareToView(this, 2)  
@@ -14,6 +15,9 @@
                 DialogUtils.showBottomView(this, bottomShareToView)  
                 
             }  
-    }```
+    }
+```
 在onDestroy中注销  
-`ScreenShotUtils.getInstance().unregister()`
+```
+ScreenShotUtils.getInstance().unregister()
+```
